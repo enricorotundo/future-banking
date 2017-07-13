@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="list-group">
+            <div ng-repeat="todo in todos.results">
+              <a href="#/todos/?id={{ todo.id }}" class="list-group-item">
+                  <p class="text-left"><strong>Id:</strong> {{ todo.id }}</p>
+                  <p class="text-left"><strong>Owner:</strong> {{ todo.owner }}</p>
+                  <p class="text-left"><strong>Status:</strong> {{ todo.status }}</p>
+                  <p class="text-left"><strong>Due Date:</strong> {{ todo.due_date }}</p>
+                  <p class="text-left"><strong>Description:</strong> {{ todo.description }}</p>
+              </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>

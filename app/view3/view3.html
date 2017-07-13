@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="list-group">
+              <div class="list-group-item">
+                  <form ng-submit="createTODO()">
+                      <p class="text-left"><strong>Due Date:</strong>
+                        <datepicker date-format="yyyy-MM-ddTHH:mm:ssZ">
+                          <input ng-model="todo.due_date" type="text" size="24" /> (date is transformed to GMT)
+                        </datepicker>
+                      </p>
+
+                      <p class="text-left"><strong>Status:</strong>
+                          <div class="radio">
+                              <label>
+                                <input type="radio" value="active" ng-model="todo.status"> Active
+                              </label>
+                              <label>
+                                <input type="radio" value="done" ng-model="todo.status"> Done
+                              </label>
+                          </div>
+                      </p>
+
+
+
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description" ng-model="todo.description">
+                      </div>
+                      <button type="submit" class="btn btn-default">Create</button>
+                  </form>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
